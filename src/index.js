@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.bundle"
+
+import "bootstrap-icons/font/bootstrap-icons.css"
+
+import "react-toastify/dist/react-toastify.css"
+
+import { Provider } from 'react-redux';
+
+import ContactStore from './Store/ContactStore';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={ContactStore}>
     <App />
+    </Provider>
+    
   </React.StrictMode>
 );
 
